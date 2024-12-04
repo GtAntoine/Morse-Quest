@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Morse Quest</title>
+    <script type="module" crossorigin src="/morse/assets/index-CbA4IcBH.js"></script>
+    <link rel="stylesheet" crossorigin href="/morse/assets/index-DhEz0_q3.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="game-container">
+        <div class="game-header">
+          <h1 class="game-title">Morse Quest</h1>
+          <div class="score-display">
+            <div class="score">
+              <span class="score-label">Score</span>
+              <span id="score" class="score-value">0</span>
+            </div>
+            <div class="high-score">
+              <span class="score-label">Record</span>
+              <span id="high-score" class="score-value">0</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="difficulty-selector">
+          <button class="difficulty-btn" data-difficulty="EASY">
+            <span class="difficulty-icon">🌟</span>
+            Facile
+          </button>
+          <button class="difficulty-btn active" data-difficulty="NORMAL">
+            <span class="difficulty-icon">⚡</span>
+            Normal
+          </button>
+          <button class="difficulty-btn" data-difficulty="HARD">
+            <span class="difficulty-icon">🔥</span>
+            Difficile
+          </button>
+        </div>
+        
+        <div class="game-box">
+          <div class="mode-description" id="mode-description">
+            Mode Normal : Devinez le mot en morse
+          </div>
+          
+          <button id="play" class="play-button">
+            <div class="play-button-content">
+              <span class="play-icon">▶</span>
+              <span>Écouter le code morse</span>
+            </div>
+            <div class="morse-animation"></div>
+          </button>
+
+          <div id="word-options" class="word-options"></div>
+          
+          <div id="input-container" class="input-container">
+            <input 
+              type="text" 
+              id="guess" 
+              placeholder="Tapez votre réponse..."
+              autocomplete="off"
+              maxlength="15"
+            />
+            <button id="submit" class="primary-button">
+              <span class="button-text">OK</span>
+            </button>
+          </div>
+        </div>
+
+        <button id="toggle-help" class="help-button">
+          <span class="help-icon">📖</span>
+          Alphabet Morse
+        </button>
+
+        <div id="morse-table" class="morse-table">
+          <div class="morse-grid" id="morse-grid"></div>
+        </div>
+
+        <div id="message" class="message"></div>
+      </div>
+    </div>
+  </body>
+</html>
